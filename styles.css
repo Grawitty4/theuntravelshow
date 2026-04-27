@@ -1,0 +1,270 @@
+:root {
+  --bg: #0f1014;
+  --bg-soft: #171923;
+  --text: #eef2ff;
+  --muted: #b9c0d4;
+  --brand: #ff6b3d;
+  --brand-soft: #ffb088;
+  --border: #2b3142;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, #0b0c11 0%, var(--bg) 45%, #11131b 100%);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  background: rgba(15, 16, 20, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.eyebrow {
+  color: var(--brand-soft);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  margin: 0.4rem 0 1rem;
+}
+
+h2 {
+  margin: 0.3rem 0 0.7rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.hero-card,
+.card {
+  background: linear-gradient(180deg, #151826 0%, #121420 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+
+.hero-card ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--brand);
+}
+
+.btn-primary:hover {
+  background: #f45625;
+}
+
+.btn-secondary {
+  color: var(--text);
+  background: transparent;
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: #3b4257;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p,
+.card li,
+.card a {
+  color: var(--muted);
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  color: var(--text);
+}
+
+.pill {
+  margin: 0;
+  color: var(--brand-soft);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.apply-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.apply-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f111a;
+  color: var(--text);
+  padding: 0.65rem 0.7rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #ffffff25;
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+@media (max-width: 880px) {
+  .site-nav,
+  .desktop-cta {
+    display: none;
+  }
+
+  .hero-grid,
+  .three-col,
+  .two-col,
+  .footer-wrap {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
