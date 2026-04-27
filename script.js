@@ -37,6 +37,45 @@ openTabButtons.forEach((button) => {
   });
 });
 
+function setupOtherInputs() {
+  const radiosWithOther = Array.from(document.querySelectorAll("input[type='radio'][data-other-target]"));
+  const targets = new Map();
+
+  radiosWithOther.forEach((radio) => {
+    const targetId = radio.dataset.otherTarget;
+    if (!targets.has(targetId)) {
+      targets.set(targetId, []);
+    }
+    targets.get(targetId).push(radio);
+  });
+
+  targets.forEach((radioGroup, targetId) => {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const input = target.querySelector("input, textarea");
+
+    function syncVisibility() {
+      const activeOther = radioGroup.some((radio) => radio.checked);
+      target.hidden = !activeOther;
+      if (input) {
+        input.required = activeOther;
+        if (!activeOther) input.value = "";
+      }
+    }
+
+    radioGroup.forEach((radio) => {
+      radio.addEventListener("change", syncVisibility);
+      const allInName = document.querySelectorAll(`input[type='radio'][name='${radio.name}']`);
+      allInName.forEach((item) => item.addEventListener("change", syncVisibility));
+    });
+
+    syncVisibility();
+  });
+}
+
+setupOtherInputs();
+
 const form = document.querySelector(".apply-form");
 if (form) {
   form.addEventListener("submit", (event) => {

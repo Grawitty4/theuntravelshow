@@ -126,6 +126,30 @@
               </div>
               <div class="cards two-col">
                 <article class="card">
+                  <p class="pill">Untravel With Abhishek</p>
+                  <h3>Let us UNTRAVEL the world one story at a time!</h3>
+                  <p>
+                    Request you to kindly spend a few minutes in sincerely filling up this form in
+                    order to give us an idea of your preferences and reasoning behind why do you want
+                    to be a part of this journey.
+                  </p>
+                  <p>
+                    Just to clarify Untravel Experiences are host-led trips designed for people who
+                    care more about <em>how</em> they travel than <em>how</em> they can do it on
+                    budget. If your primary filter is price comparison with self-planned or
+                    large-group tours, this might not be the right fit.
+                  </p>
+                  <p>
+                    These trips are slower, intentionally limited in group size, and hosted by me
+                    throughout. The focus is on conversations, slow travel, local experiences, shared
+                    meals, unplanned moments, and being present in a place rather than "covering" it.
+                  </p>
+                  <p>
+                    <strong
+                      >Once shortlisted we'll reach out to you with the dates, cost and the other
+                      details of our upcoming trip.</strong
+                    >
+                  </p>
                   <h3>Selection process</h3>
                   <ol>
                     <li>Application form submission</li>
@@ -137,57 +161,54 @@
                 </article>
                 <article class="card">
                   <h3>Apply for the next cohort</h3>
-                  <p>
-                    Let us untravel the world one story at a time. This is a selection-first form
-                    for travelers who care more about how they travel than budget comparisons.
-                  </p>
                   <form class="apply-form" name="trip-application" netlify>
                     <label>
-                      Full name
+                      Name <span class="required">*</span>
                       <input type="text" name="name" required />
                     </label>
                     <label>
                       Email (abc@gmail.com is not an acceptable response 😄)
+                      <span class="required">*</span>
                       <input type="email" name="email" required />
                     </label>
                     <label>
-                      Age
+                      Age <span class="required">*</span>
                       <input type="number" name="age" min="18" required />
                     </label>
                     <label>
-                      Profession & Company
+                      Profession & Company <span class="required">*</span>
                       <input type="text" name="profession_company" required />
                     </label>
                     <label>
-                      WhatsApp Number
+                      Whatsapp No. <span class="required">*</span>
                       <input type="tel" name="whatsapp" required />
                     </label>
                     <label>
-                      Current City
+                      Current City <span class="required">*</span>
                       <input type="text" name="current_city" required />
                     </label>
                     <label>
-                      Other than travel, what brings you the most joy?
+                      Other than travel (obviously!), what brings you the most joy? <span class="required">*</span>
                       <textarea name="joy" rows="3" required></textarea>
                     </label>
                     <label>
-                      Share 1-2 social media handles (Insta/FB/LinkedIn/X/YouTube)
+                      Care to share 1 or 2 of your social media handles? - Insta, FB, Linkedin, Tiktok, Twitter or Youtube? <span class="required">*</span>
                       <input type="text" name="social_handles" required />
                     </label>
 
                     <fieldset>
-                      <legend>What makes The Untravel Show your most beloved channel?</legend>
+                      <legend>What makes The Untravel Show your most beloved channel? <span class="required">*</span></legend>
                       <label
                         ><input type="radio" name="beloved_channel_reason" value="places" required />
-                        Types of places we explore</label
+                        Types of places that we explore</label
                       >
                       <label
                         ><input type="radio" name="beloved_channel_reason" value="people_stories" />
-                        People & stories we share</label
+                        People & Stories that we share</label
                       >
                       <label
                         ><input type="radio" name="beloved_channel_reason" value="cinematography_music" />
-                        Cinematography & music</label
+                        Cinematography & Music</label
                       >
                       <label
                         ><input type="radio" name="beloved_channel_reason" value="narration" />
@@ -197,22 +218,35 @@
                         ><input type="radio" name="beloved_channel_reason" value="all" /> All of the
                         above</label
                       >
+                      <label
+                        ><input
+                          type="radio"
+                          name="beloved_channel_reason"
+                          value="other"
+                          data-other-target="beloved-channel-other"
+                        />
+                        Other:</label
+                      >
+                      <label id="beloved-channel-other" class="other-input" hidden>
+                        Please specify
+                        <input type="text" name="beloved_channel_reason_other" />
+                      </label>
                     </fieldset>
 
                     <fieldset>
-                      <legend>Which statement do you associate with the most?</legend>
+                      <legend>With which of these statements do you associate the most? <span class="required">*</span></legend>
                       <label
                         ><input type="radio" name="travel_budget_style" value="shoestring" required />
                         I travel only on shoe-string budget.</label
                       >
                       <label
                         ><input type="radio" name="travel_budget_style" value="experience_first" /> I
-                        do not mind spending if the experience is unique and great.</label
+                        don't mind spending money on travel as long as my experience is great and unique.</label
                       >
                     </fieldset>
 
                     <fieldset>
-                      <legend>Who would be accompanying you on this trip?</legend>
+                      <legend>Who'd be accompanying you on this trip ? <span class="required">*</span></legend>
                       <label
                         ><input type="radio" name="companions" value="solo" required /> I will be
                         travelling solo</label
@@ -222,25 +256,33 @@
                         partner/spouse</label
                       >
                       <label
-                        ><input type="radio" name="companions" value="friends_family" /> With
-                        friends/family</label
+                        ><input type="radio" name="companions" value="friends_family" /> I will be accompanied by my friends/family members</label
                       >
-                      <label><input type="radio" name="companions" value="other" /> Other</label>
+                      <label
+                        ><input
+                          type="radio"
+                          name="companions"
+                          value="other"
+                          data-other-target="companions-other"
+                        />
+                        Other:</label
+                      >
+                      <label id="companions-other" class="other-input" hidden>
+                        Please specify
+                        <input type="text" name="companions_other" />
+                      </label>
                     </fieldset>
 
                     <fieldset>
-                      <legend>Which travel style best describes you?</legend>
+                      <legend>Which out of these is your travel style ? - There is no right or wrong answer 😁 <span class="required">*</span></legend>
                       <label
-                        ><input type="radio" name="travel_style" value="packed" required /> I explore
-                        as many activities as possible</label
+                        ><input type="radio" name="travel_style" value="packed" required /> When I go to a destination, I try to explore as many activities/experiences as possible</label
                       >
                       <label
-                        ><input type="radio" name="travel_style" value="laidback" /> I am more
-                        laidback and travel to slow down</label
+                        ><input type="radio" name="travel_style" value="laidback" /> Whether it's Goa or Gwaldam, I'm more of a laidback and do-nothing kind of a traveler and I just go to relax</label
                       >
                       <label
-                        ><input type="radio" name="travel_style" value="immersive" /> I avoid crowded
-                        mainstream locations and prefer immersive experiences</label
+                        ><input type="radio" name="travel_style" value="immersive" /> I avoid crowded and mainstream locations and prefer places with more immersive experiences</label
                       >
                       <label
                         ><input type="radio" name="travel_style" value="new_traveler" /> I have not
@@ -249,7 +291,11 @@
                     </fieldset>
 
                     <label>
-                      WHY do you want to Untravel With Abhishek? (most important question)
+                      WHY do you want to Untravel With Abhishek ? <span class="required">*</span>
+                      <span class="question-sub"
+                        >This is the most important question, so please give a sincere answer and
+                        feel free to be as expressive as possible ☺️</span
+                      >
                       <textarea name="motivation" rows="5" required></textarea>
                     </label>
                     <button type="submit" class="btn btn-primary">Submit Application</button>

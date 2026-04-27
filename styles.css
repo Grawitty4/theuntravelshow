@@ -354,6 +354,24 @@ h2 {
   align-items: flex-start;
 }
 
+.required {
+  color: #c8402a;
+  font-weight: 700;
+}
+
+.question-sub {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.other-input {
+  margin-top: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
 .apply-form input[type="radio"] {
   margin-top: 0.2rem;
   width: auto;
