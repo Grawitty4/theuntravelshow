@@ -40,6 +40,7 @@ openTabButtons.forEach((button) => {
 function setupOtherInputs() {
   const radiosWithOther = Array.from(document.querySelectorAll("input[type='radio'][data-other-target]"));
   const targets = new Map();
+  const syncHandlers = [];
 
   radiosWithOther.forEach((radio) => {
     const targetId = radio.dataset.otherTarget;
@@ -71,10 +72,15 @@ function setupOtherInputs() {
     });
 
     syncVisibility();
+    syncHandlers.push(syncVisibility);
   });
+
+  return () => {
+    syncHandlers.forEach((handler) => handler());
+  };
 }
 
-setupOtherInputs();
+const syncOtherInputs = setupOtherInputs();
 
 const form = document.querySelector(".apply-form");
 if (form) {
@@ -88,5 +94,6 @@ if (form) {
     );
 
     form.reset();
+    syncOtherInputs();
   });
 }

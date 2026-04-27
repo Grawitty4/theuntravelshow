@@ -328,10 +328,15 @@ h2 {
 }
 
 .apply-form label {
-  display: grid;
-  gap: 0.35rem;
+  display: block;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.apply-form > label input,
+.apply-form > label textarea {
+  display: block;
+  margin-top: 0.35rem;
 }
 
 .apply-form fieldset {
@@ -357,6 +362,8 @@ h2 {
 .required {
   color: #c8402a;
   font-weight: 700;
+  display: inline;
+  white-space: nowrap;
 }
 
 .question-sub {
