@@ -187,6 +187,15 @@ h2 {
   justify-content: center;
 }
 
+.tabs-main::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs-main::-webkit-scrollbar-thumb {
+  background: #e8cfba;
+  border-radius: 999px;
+}
+
 .tab {
   border: 1px solid #edddcd;
   border-radius: 999px;
@@ -278,6 +287,15 @@ h2 {
   color: var(--text);
 }
 
+.testimonial {
+  margin: 0.6rem 0;
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid #ffb58f;
+  background: #fff4e8;
+  border-radius: 10px;
+  color: #5c4a39;
+}
+
 .pill {
   margin: 0;
   color: #bf5b2d;
@@ -349,6 +367,20 @@ textarea:focus {
   .tabs-main {
     width: 100%;
     justify-content: flex-start;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 14px,
+      #000 calc(100% - 14px),
+      transparent 100%
+    );
   }
 
   .hero-grid,
