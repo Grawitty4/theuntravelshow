@@ -1,13 +1,13 @@
 :root {
-  --bg: #fff9f2;
-  --bg-soft: #fff1e5;
+  --bg: #fffaf4;
+  --bg-soft: #fff2e3;
   --bg-card: #ffffff;
   --text: #1b2130;
   --muted: #56607a;
-  --brand: #ff6f3c;
-  --brand-2: #35b6a8;
-  --brand-soft: #ffe0cf;
-  --border: #ebd9ca;
+  --brand: #d84b2a;
+  --brand-2: #f4b400;
+  --brand-soft: #ffe7d0;
+  --border: #ecdccf;
 }
 
 * {
@@ -18,8 +18,8 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, sans-serif;
   background:
-    radial-gradient(circle at 15% 10%, #ffe3cf 0%, transparent 36%),
-    radial-gradient(circle at 85% 15%, #d2f6ef 0%, transparent 33%),
+    radial-gradient(circle at 15% 10%, #ffe0ca 0%, transparent 36%),
+    radial-gradient(circle at 85% 15%, #ffe8a3 0%, transparent 33%),
     linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
   color: var(--text);
   line-height: 1.55;
@@ -50,7 +50,26 @@ body {
 .brand {
   color: var(--text);
   text-decoration: none;
-  font-weight: 800;
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-main {
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-size: 1.08rem;
+}
+
+.brand-accent {
+  color: var(--brand);
+}
+
+.brand-sub {
+  margin-top: 0.1rem;
+  font-size: 0.72rem;
+  color: #a06c4f;
+  text-transform: lowercase;
 }
 
 .site-nav {
@@ -135,7 +154,7 @@ h2 {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(140deg, var(--brand) 0%, #ff8754 100%);
+  background: linear-gradient(140deg, var(--brand) 0%, #ef6e34 60%, var(--brand-2) 100%);
 }
 
 .btn-primary:hover {
@@ -212,7 +231,7 @@ h2 {
 }
 
 .tab.is-active {
-  background: linear-gradient(120deg, #ff7d4c 0%, #ff9f6f 100%);
+  background: linear-gradient(120deg, var(--brand) 0%, #ea6e37 60%, var(--brand-2) 100%);
   color: #fff;
   border-color: transparent;
 }
@@ -298,7 +317,7 @@ h2 {
 
 .pill {
   margin: 0;
-  color: #bf5b2d;
+  color: var(--brand);
   font-weight: 600;
   font-size: 0.8rem;
 }
