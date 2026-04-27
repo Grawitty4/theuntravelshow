@@ -20,6 +20,24 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#top">The Untravel Show</a>
+        <div class="tabs tabs-main" role="tablist" aria-label="Main sections">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="episodes">
+            <span class="tab-icon" aria-hidden="true">EP</span>
+            <span>Episodes</span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="group-trips">
+            <span class="tab-icon" aria-hidden="true">GT</span>
+            <span>Group Trips</span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="experiences">
+            <span class="tab-icon" aria-hidden="true">AE</span>
+            <span>Airbnb Experiences</span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="gratitude">
+            <span class="tab-icon" aria-hidden="true">GR</span>
+            <span>Gratitude</span>
+          </button>
+        </div>
         <a class="btn btn-primary desktop-cta" href="#" data-open-tab="group-trips">Apply</a>
       </div>
     </header>
@@ -38,8 +56,8 @@
               <button class="btn btn-primary" type="button" data-open-tab="group-trips">
                 Apply for Group Trips
               </button>
-              <button class="btn btn-secondary" type="button" data-open-tab="support">
-                Support the Stories
+              <button class="btn btn-secondary" type="button" data-open-tab="gratitude">
+                Share Gratitude
               </button>
             </div>
           </div>
@@ -57,25 +75,6 @@
 
       <section class="section">
         <div class="container">
-          <div class="tabs" role="tablist" aria-label="Content sections">
-            <button class="tab is-active" role="tab" aria-selected="true" data-tab="episodes">
-              <span class="tab-icon" aria-hidden="true">EP</span>
-              <span>Episodes</span>
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-tab="group-trips">
-              <span class="tab-icon" aria-hidden="true">GT</span>
-              <span>Group Trips</span>
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-tab="experiences">
-              <span class="tab-icon" aria-hidden="true">AE</span>
-              <span>Airbnb Experiences</span>
-            </button>
-            <button class="tab" role="tab" aria-selected="false" data-tab="support">
-              <span class="tab-icon" aria-hidden="true">SP</span>
-              <span>Support</span>
-            </button>
-          </div>
-
           <div class="tab-panels">
             <section class="tab-panel is-active" id="episodes" role="tabpanel">
               <div class="section-head">
@@ -167,22 +166,22 @@
               </div>
             </section>
 
-            <section class="tab-panel" id="support" role="tabpanel" hidden>
+            <section class="tab-panel" id="gratitude" role="tabpanel" hidden>
               <div class="section-head">
-                <p class="eyebrow">Support the Stories</p>
-                <h2>Direct support options on your website</h2>
+                <p class="eyebrow">Gratitude Circle</p>
+                <h2>Ways to encourage and sustain the storytelling journey</h2>
                 <p>These buttons will be connected to Razorpay or Patreon links in the next step.</p>
               </div>
               <div class="cards three-col">
                 <article class="card">
-                  <h3>One-time support</h3>
+                  <h3>One-time appreciation</h3>
                   <p>Back an episode shoot, edit cycle, or travel research leg.</p>
-                  <button class="btn btn-secondary" type="button">Contribute Once</button>
+                  <button class="btn btn-secondary" type="button">Send Appreciation</button>
                 </article>
                 <article class="card">
-                  <h3>Monthly patron</h3>
+                  <h3>Monthly encourager</h3>
                   <p>Support ongoing work and unlock behind-the-scenes access.</p>
-                  <button class="btn btn-secondary" type="button">Become a Patron</button>
+                  <button class="btn btn-secondary" type="button">Join the Circle</button>
                 </article>
                 <article class="card">
                   <h3>Trip scholarship fund</h3>

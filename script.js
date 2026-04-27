@@ -30,9 +30,9 @@ openTabButtons.forEach((button) => {
     event.preventDefault();
     const tabId = button.dataset.openTab;
     setActiveTab(tabId);
-    const tabTarget = document.querySelector(`[data-tab="${tabId}"]`);
-    if (tabTarget) {
-      tabTarget.scrollIntoView({ behavior: "smooth", block: "center" });
+    const panelTarget = document.getElementById(tabId);
+    if (panelTarget) {
+      panelTarget.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 });
