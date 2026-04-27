@@ -20,14 +20,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="#top">The Untravel Show</a>
-        <nav class="site-nav">
-          <a href="#episodes">Episodes</a>
-          <a href="#group-trips">Group Trips</a>
-          <a href="#experiences">Experiences</a>
-          <a href="#support">Support</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a class="btn btn-primary desktop-cta" href="#apply">Apply</a>
+        <a class="btn btn-primary desktop-cta" href="#" data-open-tab="group-trips">Apply</a>
       </div>
     </header>
 
@@ -36,161 +29,168 @@
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">India. Stories. People.</p>
-            <h1>Travel stories that begin on screen and continue on the road.</h1>
+            <h1>Vibrant journeys for curious people, online and on-ground.</h1>
             <p class="lead">
-              We create narrative travel episodes across India and host curated 6-7 person
-              founder-led group journeys for like-minded explorers. We also run on-demand Airbnb
-              Experiences for flexible travelers.
+              We create travel stories across India and run carefully curated 6-7 person fixed-date
+              group trips. For flexible travelers, we also host on-demand Airbnb Experiences.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#apply">Apply for Group Trips</a>
-              <a class="btn btn-secondary" href="#support">Support the Stories</a>
+              <button class="btn btn-primary" type="button" data-open-tab="group-trips">
+                Apply for Group Trips
+              </button>
+              <button class="btn btn-secondary" type="button" data-open-tab="support">
+                Support the Stories
+              </button>
             </div>
           </div>
           <div class="hero-card">
-            <h3>What makes this different</h3>
+            <h3>Why people choose us</h3>
             <ul>
-              <li>Small groups (6-7 participants only)</li>
-              <li>Selection via form + founder call</li>
-              <li>Expectation setting before confirmation</li>
-              <li>On-demand experiences via Airbnb</li>
+              <li>Selective micro-groups, not mass tours</li>
+              <li>Founder discussion before confirmation</li>
+              <li>Expectation-setting first, payments next</li>
+              <li>Storytelling across YouTube and Instagram</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="episodes" class="section">
+      <section class="section">
         <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Episodes</p>
-            <h2>From Shorts and Reels to long-form stories</h2>
-            <p>
-              Add your final YouTube and Instagram links here once ready. This layout can scale for
-              many episodes and destinations.
-            </p>
+          <div class="tabs" role="tablist" aria-label="Content sections">
+            <button class="tab is-active" role="tab" aria-selected="true" data-tab="episodes">
+              <span class="tab-icon" aria-hidden="true">EP</span>
+              <span>Episodes</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="group-trips">
+              <span class="tab-icon" aria-hidden="true">GT</span>
+              <span>Group Trips</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="experiences">
+              <span class="tab-icon" aria-hidden="true">AE</span>
+              <span>Airbnb Experiences</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="support">
+              <span class="tab-icon" aria-hidden="true">SP</span>
+              <span>Support</span>
+            </button>
           </div>
-          <div class="cards three-col">
-            <article class="card">
-              <p class="pill">YouTube Short</p>
-              <h3>Street food, stories, and serendipity</h3>
-              <p>Placeholder episode card for short-form storytelling moments.</p>
-              <a href="#" aria-disabled="true">Link coming soon</a>
-            </article>
-            <article class="card">
-              <p class="pill">Instagram Reel</p>
-              <h3>Culture in 60 seconds</h3>
-              <p>Use this block for high-performing Reels with location-specific hooks.</p>
-              <a href="#" aria-disabled="true">Link coming soon</a>
-            </article>
-            <article class="card">
-              <p class="pill">20-min Episode</p>
-              <h3>The soul of a place</h3>
-              <p>Long-form flagship episodes that drive deeper connection and trip applications.</p>
-              <a href="#" aria-disabled="true">Link coming soon</a>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="group-trips" class="section section-alt">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Curated Group Trips</p>
-            <h2>Fixed-date journeys for a thoughtfully selected cohort</h2>
-          </div>
-          <div class="cards two-col">
-            <article class="card">
-              <h3>Selection flow</h3>
-              <ol>
-                <li>Application form</li>
-                <li>Founder discussion call</li>
-                <li>Fit and expectations check</li>
-                <li>Selection confirmation</li>
-                <li>Deposit payment to reserve spot</li>
-              </ol>
-            </article>
-            <article class="card" id="apply">
-              <h3>Apply for the next cohort</h3>
-              <p>
-                This is a draft intake form. We can expand it with your final screening questions
-                and trip preferences.
-              </p>
-              <form class="apply-form" name="trip-application" netlify>
-                <label>
-                  Full name
-                  <input type="text" name="name" required />
-                </label>
-                <label>
-                  Email
-                  <input type="email" name="email" required />
-                </label>
-                <label>
-                  Why do you want to join?
-                  <textarea name="motivation" rows="4" required></textarea>
-                </label>
-                <button type="submit" class="btn btn-primary">Submit Application</button>
-              </form>
-            </article>
-          </div>
-        </div>
-      </section>
+          <div class="tab-panels">
+            <section class="tab-panel is-active" id="episodes" role="tabpanel">
+              <div class="section-head">
+                <p class="eyebrow">Episodes</p>
+                <h2>Short, reel, and long-form stories in one place</h2>
+                <p>We will plug your final YouTube and Instagram links in these cards next.</p>
+              </div>
+              <div class="cards three-col">
+                <article class="card">
+                  <p class="pill">YouTube Short</p>
+                  <h3>Street food and hidden lanes</h3>
+                  <p>Fast story moments for discovery and shareability.</p>
+                  <a href="#" aria-disabled="true">Link coming soon</a>
+                </article>
+                <article class="card">
+                  <p class="pill">Instagram Reel</p>
+                  <h3>Culture in one minute</h3>
+                  <p>Highly visual snippets that connect people to place.</p>
+                  <a href="#" aria-disabled="true">Link coming soon</a>
+                </article>
+                <article class="card">
+                  <p class="pill">20-min Episode</p>
+                  <h3>Deep dive destination story</h3>
+                  <p>Long-form narratives for stronger emotional connection.</p>
+                  <a href="#" aria-disabled="true">Link coming soon</a>
+                </article>
+              </div>
+            </section>
 
-      <section id="experiences" class="section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Airbnb Experiences</p>
-            <h2>On-demand immersive experiences</h2>
-            <p>
-              Keep discovery and storytelling on your site, then direct users to Airbnb for trusted
-              booking and operations.
-            </p>
-          </div>
-          <div class="cards three-col">
-            <article class="card">
-              <h3>Old Delhi food trail</h3>
-              <p>Story-led culinary walk blending local history and hidden spots.</p>
-              <a href="#" aria-disabled="true">Airbnb link pending</a>
-            </article>
-            <article class="card">
-              <h3>Sunrise heritage walk</h3>
-              <p>Slow exploration and photography moments in historic neighborhoods.</p>
-              <a href="#" aria-disabled="true">Airbnb link pending</a>
-            </article>
-            <article class="card">
-              <h3>Culture and conversation circle</h3>
-              <p>Founder-hosted local interaction experience for curious travelers.</p>
-              <a href="#" aria-disabled="true">Airbnb link pending</a>
-            </article>
-          </div>
-        </div>
-      </section>
+            <section class="tab-panel" id="group-trips" role="tabpanel" hidden>
+              <div class="section-head">
+                <p class="eyebrow">Curated Group Trips</p>
+                <h2>Fixed dates. 6-7 participants. One aligned cohort.</h2>
+              </div>
+              <div class="cards two-col">
+                <article class="card">
+                  <h3>Selection process</h3>
+                  <ol>
+                    <li>Application form submission</li>
+                    <li>Founder conversation call</li>
+                    <li>Like-mindedness and expectation review</li>
+                    <li>Selection confirmation email</li>
+                    <li>Deposit and final payment schedule</li>
+                  </ol>
+                </article>
+                <article class="card">
+                  <h3>Apply for the next cohort</h3>
+                  <form class="apply-form" name="trip-application" netlify>
+                    <label>
+                      Full name
+                      <input type="text" name="name" required />
+                    </label>
+                    <label>
+                      Email
+                      <input type="email" name="email" required />
+                    </label>
+                    <label>
+                      Why do you want to join this format?
+                      <textarea name="motivation" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                  </form>
+                </article>
+              </div>
+            </section>
 
-      <section id="support" class="section section-alt">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Support the Stories</p>
-            <h2>Back the work directly on the website</h2>
-            <p>
-              Replace or complement Patreon with direct support options. Payment links can be wired
-              to Razorpay in the next iteration.
-            </p>
-          </div>
-          <div class="cards three-col">
-            <article class="card">
-              <h3>One-time support</h3>
-              <p>Support an episode, a location shoot, or post-production.</p>
-              <button class="btn btn-secondary" type="button">Contribute Once</button>
-            </article>
-            <article class="card">
-              <h3>Monthly patron</h3>
-              <p>Get behind-the-scenes updates and early community access.</p>
-              <button class="btn btn-secondary" type="button">Become a Patron</button>
-            </article>
-            <article class="card">
-              <h3>Trip scholarship fund</h3>
-              <p>Help someone deserving join a curated journey.</p>
-              <button class="btn btn-secondary" type="button">Contribute to Fund</button>
-            </article>
+            <section class="tab-panel" id="experiences" role="tabpanel" hidden>
+              <div class="section-head">
+                <p class="eyebrow">Airbnb Experiences</p>
+                <h2>On-demand experiences with trusted booking flow</h2>
+                <p>Your site inspires and informs, Airbnb handles live booking and operations.</p>
+              </div>
+              <div class="cards three-col">
+                <article class="card">
+                  <h3>Old Delhi food trail</h3>
+                  <p>Founder-hosted local discovery through taste and history.</p>
+                  <a href="#" aria-disabled="true">Airbnb link pending</a>
+                </article>
+                <article class="card">
+                  <h3>Sunrise heritage walk</h3>
+                  <p>Photo-friendly cultural walk through early-morning city life.</p>
+                  <a href="#" aria-disabled="true">Airbnb link pending</a>
+                </article>
+                <article class="card">
+                  <h3>Culture and conversation circle</h3>
+                  <p>Thoughtful local exchange designed for curious travelers.</p>
+                  <a href="#" aria-disabled="true">Airbnb link pending</a>
+                </article>
+              </div>
+            </section>
+
+            <section class="tab-panel" id="support" role="tabpanel" hidden>
+              <div class="section-head">
+                <p class="eyebrow">Support the Stories</p>
+                <h2>Direct support options on your website</h2>
+                <p>These buttons will be connected to Razorpay or Patreon links in the next step.</p>
+              </div>
+              <div class="cards three-col">
+                <article class="card">
+                  <h3>One-time support</h3>
+                  <p>Back an episode shoot, edit cycle, or travel research leg.</p>
+                  <button class="btn btn-secondary" type="button">Contribute Once</button>
+                </article>
+                <article class="card">
+                  <h3>Monthly patron</h3>
+                  <p>Support ongoing work and unlock behind-the-scenes access.</p>
+                  <button class="btn btn-secondary" type="button">Become a Patron</button>
+                </article>
+                <article class="card">
+                  <h3>Trip scholarship fund</h3>
+                  <p>Enable one deserving traveler to join a curated cohort.</p>
+                  <button class="btn btn-secondary" type="button">Contribute to Fund</button>
+                </article>
+              </div>
+            </section>
           </div>
         </div>
       </section>
