@@ -421,6 +421,29 @@ h2 {
   margin: 0.3rem 0;
 }
 
+.episode-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.episode-item {
+  margin: 0.45rem 0;
+}
+
+.episode-link {
+  display: grid;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.episode-thumb {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
 .video-grid {
   display: grid;
   gap: 0.75rem;

@@ -296,18 +296,49 @@ function initEpisodesMap() {
 
   locations.forEach((location) => {
     const marker = L.marker(location.coords).addTo(episodesMap);
+
+    function getYouTubeId(url) {
+      try {
+        const parsed = new URL(url);
+        if (parsed.hostname.includes("youtu.be")) {
+          return parsed.pathname.replace("/", "");
+        }
+        if (parsed.searchParams.get("v")) {
+          return parsed.searchParams.get("v");
+        }
+      } catch {
+        return "";
+      }
+      return "";
+    }
+
     const episodesHtml = location.episodes
-      .map(
-        (episode) =>
-          `<li><a href="${episode.url}" target="_blank" rel="noreferrer">${episode.title}</a></li>`
-      )
+      .map((episode) => {
+        const videoId = getYouTubeId(episode.url);
+        const thumbnail = videoId
+          ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+          : "";
+
+        return `
+          <li class="episode-item">
+            <a href="${episode.url}" target="_blank" rel="noreferrer" class="episode-link">
+              ${
+                thumbnail
+                  ? `<img src="${thumbnail}" alt="${episode.title} thumbnail" class="episode-thumb" />`
+                  : ""
+              }
+              <span>${episode.title}</span>
+            </a>
+          </li>
+        `;
+      })
       .join("");
 
     marker.bindPopup(`
       <div class="episode-popup">
         <h4>${location.name}</h4>
         <p>${location.brief}</p>
-        <ul>${episodesHtml}</ul>
+        <ul class="episode-list">${episodesHtml}</ul>
       </div>
     `);
   });
