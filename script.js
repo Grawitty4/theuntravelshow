@@ -179,7 +179,7 @@ function initEpisodesMap() {
         "Historic streets, Danube views, and layered cultural stories from Central Europe.",
       episodes: [
         {
-          title: "Budapest Episode",
+          title: "Not Done With Europe | Ep 1 | Why Were We HUNGARY | Budapest Travel Video",
           url: "https://www.youtube.com/watch?v=bXpyIllUMGI",
         },
       ],
@@ -191,7 +191,8 @@ function initEpisodesMap() {
         "A walled coastal city with Adriatic charm, history, and cinematic old-town corners.",
       episodes: [
         {
-          title: "Dubrovnik Episode",
+          title:
+            "Not Done With Europe | Ep 2 | How Croatia BLUE ME AWAY | Experience Croatia in 4 minutes",
           url: "https://www.youtube.com/watch?v=0UEx8eVkeMA",
         },
       ],
@@ -203,7 +204,8 @@ function initEpisodesMap() {
         "A relaxed riverside capital known for walkable neighborhoods and creative spirit.",
       episodes: [
         {
-          title: "Ljubljana Episode",
+          title:
+            "Not Done With Europe | Ep 3 | Snapshots from Slovenia | Slovenia Travel Video",
           url: "https://www.youtube.com/watch?v=BROSc5GIk7o",
         },
       ],
@@ -215,7 +217,7 @@ function initEpisodesMap() {
         "Rolling countryside, stone villages, and slow-travel storytelling in rural England.",
       episodes: [
         {
-          title: "Cotswolds Episode",
+          title: "Exploring The Cotswolds | England's Most Charming Villages",
           url: "https://www.youtube.com/watch?v=e85VRic1lS4",
         },
       ],
@@ -227,7 +229,7 @@ function initEpisodesMap() {
         "Old Quarter energy, street food culture, and everyday life in Vietnam's capital.",
       episodes: [
         {
-          title: "Hanoi Episode",
+          title: "Untravel VIETNAM | Teaser | Travel Series COMING SOON",
           url: "https://www.youtube.com/watch?v=PzH9Au_diZA&list=PL76-1IsJMwJKlz4J8Z7W-CZP03GnDwTJp",
         },
       ],
@@ -239,15 +241,15 @@ function initEpisodesMap() {
         "A mountain-framed city and gateway to Central Asian landscapes and local culture.",
       episodes: [
         {
-          title: "Bishkek Episode 1",
+          title: "JYRGALAN - What Makes It My Fav Place In Kyrgyzstan",
           url: "https://www.youtube.com/watch?v=RHsDCsXhBLI",
         },
         {
-          title: "Bishkek Episode 2",
+          title: "An Indian's First Impressions of Kyrgyzstan ( NOT What I Expected )",
           url: "https://www.youtube.com/watch?v=q0puinIRWYE",
         },
         {
-          title: "Bishkek Episode 3",
+          title: "Journey Through KYRGYZSTAN : The Ultimate Road Trip | Cinematic Travel Film",
           url: "https://www.youtube.com/watch?v=hcb2NHl75wE",
         },
       ],
@@ -259,11 +261,12 @@ function initEpisodesMap() {
         "A deeply meaningful spiritual destination shaped by faith, history, and border stories.",
       episodes: [
         {
-          title: "Kartarpur Episode 1",
+          title:
+            "10 THINGS YOU MUST KNOW BEFORE VISITING KARTARPUR SAHIB | Documents, passport stamping, fees etc",
           url: "https://www.youtube.com/watch?v=AfGv-TQlIas",
         },
         {
-          title: "Kartarpur Episode 2",
+          title: "How an Indian can go to Pakistan | The Kartarpur Corridor Experience",
           url: "https://www.youtube.com/watch?v=BcoorOvh5G8",
         },
       ],
@@ -275,19 +278,21 @@ function initEpisodesMap() {
         "A literary, musical, and social city where pub culture and local character come alive.",
       episodes: [
         {
-          title: "Dublin Episode 1",
+          title: "Christmas In IRELAND & How To Make A LONG DISTANCE RELATIONSHIP Work",
           url: "https://youtu.be/Yq3uJeOkDPM?si=kmnu8jbA2qTFjPyu",
         },
         {
-          title: "Dublin Episode 2",
+          title: "Driving the DINGLE PENINSULA: One of Ireland's Most Amazing Road Trips",
           url: "https://youtu.be/S1P4Ny7qhVM?si=LTVGISIdV-LIiFrc",
         },
         {
-          title: "Dublin Episode 3",
+          title:
+            "Unmissable Experiences On The Wild Atlantic Way In Donegal Ireland [Pt. 1] | Letterkenny & Glenveagh",
           url: "https://youtu.be/rxiyYQnJzzo?si=0qtuz_NGzSq8RiaB",
         },
         {
-          title: "Dublin Episode 4",
+          title:
+            "The End Of Ireland Roadtrip | Wild Atlantic Way, Fanad Head Lighthouse, Wild Pollet Sea Arch",
           url: "https://youtu.be/zkFSPNFSfoo?si=KZlfSqqdcd20s4vm",
         },
       ],
