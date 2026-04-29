@@ -1,6 +1,7 @@
 const tabs = Array.from(document.querySelectorAll("[data-tab]"));
 const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
 const openTabButtons = Array.from(document.querySelectorAll("[data-open-tab]"));
+let episodesMap;
 
 function setActiveTab(tabId) {
   tabs.forEach((tab) => {
@@ -17,6 +18,10 @@ function setActiveTab(tabId) {
     panel.classList.toggle("is-active", isActive);
     panel.hidden = !isActive;
   });
+
+  if (tabId === "episodes" && episodesMap) {
+    setTimeout(() => episodesMap.invalidateSize(), 50);
+  }
 }
 
 tabs.forEach((tab) => {
@@ -104,3 +109,88 @@ if (form) {
     syncOtherInputs();
   });
 }
+
+function initEpisodesMap() {
+  const mapElement = document.getElementById("episodes-map");
+  if (!mapElement || typeof L === "undefined") return;
+
+  episodesMap = L.map("episodes-map", {
+    scrollWheelZoom: true,
+  }).setView([22.5, 80.0], 3);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(episodesMap);
+
+  const locations = [
+    {
+      name: "Delhi, India",
+      coords: [28.6139, 77.209],
+      brief:
+        "A layered city where old-world neighborhoods, food lanes, and modern rhythms meet.",
+      episodes: [
+        {
+          title: "Street food and hidden lanes",
+          url: "https://www.youtube.com/@THEUNTRAVELSHOW",
+        },
+      ],
+    },
+    {
+      name: "Jaipur, India",
+      coords: [26.9124, 75.7873],
+      brief:
+        "Royal architecture, craft traditions, and local stories that sit beyond postcard routes.",
+      episodes: [
+        {
+          title: "Culture in one minute",
+          url: "https://www.instagram.com/the.untravel.show?igsh=czhjaml2cG5wOGY=",
+        },
+      ],
+    },
+    {
+      name: "Varanasi, India",
+      coords: [25.3176, 82.9739],
+      brief:
+        "Sacred ghats, timeless rituals, and deeply personal narratives by the river.",
+      episodes: [
+        {
+          title: "Deep dive destination story",
+          url: "https://www.youtube.com/@THEUNTRAVELSHOW",
+        },
+      ],
+    },
+    {
+      name: "Kochi, India",
+      coords: [9.9312, 76.2673],
+      brief:
+        "A coastal blend of heritage, food culture, and contemporary creative life.",
+      episodes: [
+        {
+          title: "Local culture and conversations",
+          url: "https://www.youtube.com/@THEUNTRAVELSHOW",
+        },
+      ],
+    },
+  ];
+
+  locations.forEach((location) => {
+    const marker = L.marker(location.coords).addTo(episodesMap);
+    const episodesHtml = location.episodes
+      .map(
+        (episode) =>
+          `<li><a href="${episode.url}" target="_blank" rel="noreferrer">${episode.title}</a></li>`
+      )
+      .join("");
+
+    marker.bindPopup(`
+      <div class="episode-popup">
+        <h4>${location.name}</h4>
+        <p>${location.brief}</p>
+        <ul>${episodesHtml}</ul>
+      </div>
+    `);
+  });
+}
+
+initEpisodesMap();

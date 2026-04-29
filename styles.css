@@ -381,6 +381,46 @@ h2 {
   color: var(--muted);
 }
 
+.map-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fffdf9;
+}
+
+#episodes-map {
+  width: 100%;
+  height: 520px;
+}
+
+.map-note {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  border-top: 1px solid var(--border);
+}
+
+.episode-popup h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.episode-popup p {
+  margin: 0 0 0.5rem;
+  color: #4f586f;
+  font-size: 0.88rem;
+}
+
+.episode-popup ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.episode-popup li {
+  margin: 0.3rem 0;
+}
+
 .video-grid {
   display: grid;
   gap: 0.75rem;

@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -143,39 +149,17 @@
             <section class="tab-panel" id="episodes" role="tabpanel" hidden>
               <div class="section-head">
                 <p class="eyebrow">Episodes</p>
-                <h2>Short, reel, and long-form stories in one place</h2>
+                <h2>Explore stories by location</h2>
                 <p>
-                  Follow our latest storytelling drops on YouTube and Instagram.
+                  Zoom the world map and click a pin to view destination episodes and a quick local
+                  story summary.
                 </p>
               </div>
-              <div class="cards three-col">
-                <article class="card">
-                  <p class="pill">YouTube Short</p>
-                  <h3>Street food and hidden lanes</h3>
-                  <p>Fast story moments for discovery and shareability.</p>
-                  <a href="https://www.youtube.com/@THEUNTRAVELSHOW" target="_blank" rel="noreferrer"
-                    >Watch on YouTube</a
-                  >
-                </article>
-                <article class="card">
-                  <p class="pill">Instagram Reel</p>
-                  <h3>Culture in one minute</h3>
-                  <p>Highly visual snippets that connect people to place.</p>
-                  <a
-                    href="https://www.instagram.com/the.untravel.show?igsh=czhjaml2cG5wOGY="
-                    target="_blank"
-                    rel="noreferrer"
-                    >Watch on Instagram</a
-                  >
-                </article>
-                <article class="card">
-                  <p class="pill">20-min Episode</p>
-                  <h3>Deep dive destination story</h3>
-                  <p>Long-form narratives for stronger emotional connection.</p>
-                  <a href="https://www.youtube.com/@THEUNTRAVELSHOW" target="_blank" rel="noreferrer"
-                    >Watch full episodes</a
-                  >
-                </article>
+              <div class="map-card">
+                <div id="episodes-map" aria-label="Episodes world map"></div>
+                <p class="map-note">
+                  More locations can be added anytime as new episodes release.
+                </p>
               </div>
             </section>
 
@@ -557,6 +541,11 @@
       </div>
     </footer>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>
