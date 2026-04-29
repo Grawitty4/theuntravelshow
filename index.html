@@ -27,7 +27,11 @@
           />
         </a>
         <div class="tabs tabs-main" role="tablist" aria-label="Main sections">
-          <button class="tab is-active" role="tab" aria-selected="true" data-tab="episodes">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="about">
+            <span class="tab-icon" aria-hidden="true">AB</span>
+            <span>About</span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="episodes">
             <span class="tab-icon" aria-hidden="true">EP</span>
             <span>Episodes</span>
           </button>
@@ -83,7 +87,59 @@
       <section class="section">
         <div class="container">
           <div class="tab-panels">
-            <section class="tab-panel is-active" id="episodes" role="tabpanel">
+            <section class="tab-panel is-active" id="about" role="tabpanel">
+              <div class="section-head">
+                <p class="eyebrow">About the founder</p>
+                <h2>What Abhishek Vaid does through theun[t]ravelshow</h2>
+                <p>
+                  Abhishek builds story-led travel experiences that go beyond sightseeing. His work
+                  blends filmmaking, local immersion, and intentionally curated small-group journeys
+                  where conversations and people matter as much as destinations.
+                </p>
+              </div>
+              <div class="cards two-col">
+                <article class="card">
+                  <h3>Founder focus</h3>
+                  <ul>
+                    <li>Creates narrative-first travel films and social storytelling</li>
+                    <li>Designs host-led trips for people who value meaningful travel</li>
+                    <li>Works with trusted local experts to reveal deeper regional stories</li>
+                    <li>Builds a community around the idea: live the story you want to tell</li>
+                  </ul>
+                </article>
+                <article class="card">
+                  <h3>Featured founder videos</h3>
+                  <div class="video-grid">
+                    <a
+                      class="video-card"
+                      href="https://www.youtube.com/watch?v=cNaKAnKIhyQ"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src="https://img.youtube.com/vi/cNaKAnKIhyQ/hqdefault.jpg"
+                        alt="Featured founder video 1 thumbnail"
+                      />
+                      <span>Watch founder story - Video 1</span>
+                    </a>
+                    <a
+                      class="video-card"
+                      href="https://www.youtube.com/watch?v=PmAbYKZpKyI"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src="https://img.youtube.com/vi/PmAbYKZpKyI/hqdefault.jpg"
+                        alt="Featured founder video 2 thumbnail"
+                      />
+                      <span>Watch founder story - Video 2</span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="tab-panel" id="episodes" role="tabpanel" hidden>
               <div class="section-head">
                 <p class="eyebrow">Episodes</p>
                 <h2>Short, reel, and long-form stories in one place</h2>
