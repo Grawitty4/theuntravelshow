@@ -25,6 +25,13 @@ tabs.forEach((tab) => {
   });
 });
 
+const brandLink = document.querySelector(".brand");
+if (brandLink) {
+  brandLink.addEventListener("click", () => {
+    setActiveTab("about");
+  });
+}
+
 openTabButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
