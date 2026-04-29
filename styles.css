@@ -31,8 +31,7 @@ body {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 20;
   backdrop-filter: blur(10px);
   background: rgba(255, 248, 238, 0.78);
@@ -44,7 +43,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.7rem 0;
+  padding: 0.35rem 0;
 }
 
 .brand {
@@ -55,7 +54,7 @@ body {
 }
 
 .brand-logo {
-  width: 160px;
+  width: 80px;
   height: auto;
   display: block;
 }
