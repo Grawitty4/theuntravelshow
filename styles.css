@@ -1,5 +1,5 @@
 :root {
-  --bg: #fffaf4;
+  --bg: #dff7ff;
   --bg-soft: #fff2e3;
   --bg-card: #ffffff;
   --text: #1b2130;
@@ -17,16 +17,13 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%, #ffe0ca 0%, transparent 36%),
-    radial-gradient(circle at 85% 15%, #ffe8a3 0%, transparent 33%),
-    linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #ecfbff 0%, var(--bg) 100%);
   color: var(--text);
   line-height: 1.55;
 }
 
 .container {
-  width: min(1100px, 92%);
+  width: min(1340px, 96%);
   margin: 0 auto;
 }
 
@@ -34,8 +31,8 @@ body {
   position: relative;
   z-index: 20;
   backdrop-filter: blur(10px);
-  background: rgba(255, 248, 238, 0.78);
-  border-bottom: 1px solid #f3e4d6;
+  background: rgba(255, 248, 184, 0.88);
+  border-bottom: 1px solid #eadf8f;
 }
 
 .nav-wrap {
@@ -43,7 +40,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.35rem 0;
+  padding: 0.24rem 0;
 }
 
 .brand {
@@ -54,7 +51,7 @@ body {
 }
 
 .brand-logo {
-  width: 80px;
+  width: 56px;
   height: auto;
   display: block;
 }
@@ -179,6 +176,17 @@ h2 {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
+}
+
+.section-actions-below-map {
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.section-actions-below-map .btn {
+  flex: 1 1 0;
+  text-align: center;
 }
 
 .cards {
