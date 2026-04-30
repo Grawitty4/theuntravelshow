@@ -25,7 +25,7 @@ function setActiveTab(tabId) {
   }
 
   if (heroStoriesButton) {
-    heroStoriesButton.hidden = tabId === "episodes";
+    heroStoriesButton.style.display = tabId === "episodes" ? "none" : "inline-block";
   }
 }
 
