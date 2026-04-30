@@ -1,6 +1,7 @@
 const tabs = Array.from(document.querySelectorAll("[data-tab]"));
 const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
 const openTabButtons = Array.from(document.querySelectorAll("[data-open-tab]"));
+const heroStoriesButton = document.querySelector("[data-hero-stories-button]");
 let episodesMap;
 
 function setActiveTab(tabId) {
@@ -21,6 +22,10 @@ function setActiveTab(tabId) {
 
   if (tabId === "episodes" && episodesMap) {
     setTimeout(() => episodesMap.invalidateSize(), 50);
+  }
+
+  if (heroStoriesButton) {
+    heroStoriesButton.hidden = tabId === "episodes";
   }
 }
 
